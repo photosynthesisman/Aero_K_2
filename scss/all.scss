@@ -50,12 +50,11 @@
     position: relative;
     z-index: 0;
     width: 100%;
-    height: 100vh;
+    top: 0;    
     overflow: hidden;
     &.fixed {
-      position: fixed;
-      top: 0;
-      bottom: 0;
+      position: fixed; 
+      bottom: 10rem;
       z-index: -1;
     }
     .video_box {
