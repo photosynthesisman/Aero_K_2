@@ -39,7 +39,7 @@
                     <option value="청주/CJJ">청주/CJJ</option>
                   </select>
                 </div>
-                <a href="#none" class="btn_replace" role="button" aria-label="위치 맞바꾸기"></a>
+                <a href="#none" class="btn_replace" role="button" aria-label="위치맞바꾸기"></a>
                 <div class="location">
                   <span class="tit">도착</span>
                   <select name="출발지" class="city">
@@ -635,27 +635,29 @@
         $(window).scroll(function () {
           const $scroll = $(this).scrollTop();
           const $vdHeight = $('.main_visual_box').height();
-          
           if ($scroll > 0) {
-            $('.main_visual_box').addClass('fixed')
-            // $('.main_visual_box').css({
-            //   position: 'fixed',                   
-            //   zIndex: -1
-            // });
+            $('.main_visual_box').css({
+              position: 'fixed',
+              zIndex: -1
+            });
             $('.border_box').css({
-              top: 720 + 'px'
+              top: 100 + 'vh'
             });
           } else {
-            $('.main_visual_box').removeClass('fixed')
+            $('.main_visual_box').css({
+              position: 'relative',
+              zIndex: 0
+            });
           }
           if ($scroll > $vdHeight) {
-            $('.main_visual_box').removeClass('fixed')
-            
+            $('.main_visual_box').css({
+              position: 'relative',
+              zIndex: 0
+            });
             $('.border_box').css({
               top: 'auto'
             });
           }
-          
         });
       }
       bottomMenu();

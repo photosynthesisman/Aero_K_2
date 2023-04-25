@@ -25,16 +25,6 @@
   /*font*/
   --sub-font: 'subFont';
   --footer-font: 'Noto Sans KR';
-
-  --doc-height: 100%;
-}
-
-html, body {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  height: 100vh; 
-  height: var(--doc-height);
 }
 
 body {
