@@ -26,7 +26,9 @@
   --sub-font: 'subFont';
   --footer-font: 'Noto Sans KR';
 }
-
+body, html {
+  height: 100vh;
+}
 body {
   font-size: 1.6rem;
 }
