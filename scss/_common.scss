@@ -198,7 +198,7 @@ button {
   padding-top: 4rem;
   background-color: #fff;
   &.vheight {
-    top: 100vh;
+    top: var(--doc-height);  
   }
 }
 
