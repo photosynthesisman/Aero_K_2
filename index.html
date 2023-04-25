@@ -635,25 +635,39 @@
         $(window).scroll(function () {
           const $scroll = $(this).scrollTop();
           const $vdHeight = $('.main_visual_box').height();
-          if ($scroll > 0) {
-            $('.main_visual_box').css({
-              position: 'fixed',
-              zIndex: -1
-            });
+          // if ($scroll > 0) {
+          //   $('.main_visual_box').css({
+          //     position: 'fixed',            
+          //     zIndex: -1
+          //   });
+          //   $('.border_box').css({
+          //     top: 100 + 'vh'
+          //   });
+          // } else {
+          //   $('.main_visual_box').css({
+          //     position: 'relative',
+          //     zIndex: 0
+          //   });
+          // }
+          // if ($scroll > $vdHeight) {
+          //   $('.main_visual_box').css({
+          //     position: 'relative',
+          //     zIndex: 0
+          //   });
+          //   $('.border_box').css({
+          //     top: 'auto'
+          //   });
+          // }
+           if ($scroll > 0) {
+            $('.main_visual_box').addClass('fixed')
             $('.border_box').css({
               top: 100 + 'vh'
             });
           } else {
-            $('.main_visual_box').css({
-              position: 'relative',
-              zIndex: 0
-            });
+            $('.main_visual_box').removeClass('fixed');
           }
           if ($scroll > $vdHeight) {
-            $('.main_visual_box').css({
-              position: 'relative',
-              zIndex: 0
-            });
+            $('.main_visual_box').removeClass('fixed');
             $('.border_box').css({
               top: 'auto'
             });
