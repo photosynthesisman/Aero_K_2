@@ -1,12 +1,5 @@
 $(document).ready(function () {
   //최재석
-  let vh = 0;
-
-  useEffect(() => {
-    vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  }, []);
-
   function scrollActionBanner() {
     $(window).on('scroll', function () {
       const boxOffset = $('.letter_box').offset().top;
