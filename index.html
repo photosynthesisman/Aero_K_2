@@ -597,6 +597,14 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
     <script>
+      const documentHeight = () => {
+        const doc = document.documentElement
+        doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
+      }
+      window.addEventListener('resize', documentHeight)
+      documentHeight()
+      console.log(documentHeight())
+
       function bottomMenu() {
         $(window).scroll(function () {
           const $vdHeight = $('.main_visual_box').height() - $('.header').height();

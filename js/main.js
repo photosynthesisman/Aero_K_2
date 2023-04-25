@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  //최재석
+  //최재석    
 
   function scrollActionBanner() {
     $(window).on('scroll', function () {
