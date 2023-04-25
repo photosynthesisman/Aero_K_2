@@ -597,9 +597,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
     <script>
-     let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-      //vh 단위 쓸 때 해줘야 함. 이거 잡아주지 않고 100vh는 지양할 것
 
       function bottomMenu() {
         $(window).scroll(function () {
@@ -636,44 +633,38 @@
         });
       }
       function scrollFixMain() {
-        $(window).scroll(function () {
-          const $scroll = $(this).scrollTop();
-          const $vdHeight = $('.main_visual_box').height();
-          if ($scroll > 0) {
-            $('.main_visual_box').addClass('fixed');
-            $('.border_box').addClass('vheight');
-          } else {
-            $('.main_visual_box').removeClass('fixed');
-          }
-          if ($scroll > $vdHeight) {
-            $('.main_visual_box').removeClass('fixed');
-            $('.border_box').removeClass('vheight');
-          }
-          // if ($scroll > 0) {
-          //   $('.main_visual_box').css({
-          //     position: 'fixed',
-          //     zIndex: -1
-          //   });
-          //   $('.border_box').css({
-          //     top: 100 + 'vh'
-          //   });
-          // } else {
-          //   $('.main_visual_box').css({
-          //     position: 'relative',
-          //     zIndex: 0
-          //   });
-          // }
-          // if ($scroll > $vdHeight) {
-          //   $('.main_visual_box').css({
-          //     position: 'relative',
-          //     zIndex: 0
-          //   });
-          //   $('.border_box').css({
-          //     top: 'auto'
-          //   });
-          // }
-        });
-      }
+        // if(wih < 720){
+        //   $(window).scroll(function () {
+        //     const $scroll = $(this).scrollTop();
+        //     const $vdHeight = $('.main_visual_box').height();
+        //     if ($scroll > 0) {
+        //       $('.main_visual_box').addClass('s_fixed');
+        //       $('.border_box').addClass('s_vheight');
+        //     } else {
+        //       $('.main_visual_box').removeClass('s_fixed');
+        //     }
+        //     if ($scroll > $vdHeight) {
+        //       $('.main_visual_box').removeClass('s_fixed');
+        //       $('.border_box').removeClass('s_vheight');
+        //     }
+        //   })
+        // }else{
+          $(window).scroll(function () {
+            const $scroll = $(this).scrollTop();
+            const $vdHeight = $('.main_visual_box').height();
+            if ($scroll > 0) {
+              $('.main_visual_box').addClass('fixed');
+              $('.border_box').addClass('vheight');
+            } else {
+              $('.main_visual_box').removeClass('fixed');
+            }
+            if ($scroll > $vdHeight) {
+              $('.main_visual_box').removeClass('fixed');
+              $('.border_box').removeClass('vheight');
+            }
+          });
+        }       
+      // }
       bottomMenu();
       headerFix();
       accordianCard();

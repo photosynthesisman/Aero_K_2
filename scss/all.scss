@@ -54,6 +54,9 @@
     top: 100vh;
     top: calc(var(--vh, 1vh) * 100);
   }
+  &.s_vheight {    
+    top: 72rem;
+  }
 }
 .contents_box {
   .main_visual_box {
@@ -66,6 +69,9 @@
     &.fixed {
       position: fixed;
       z-index: -1;  
+    }
+    &.s_fixed {     
+      min-height: 72rem;  
     }
     .video_box {
       height: 100%;
