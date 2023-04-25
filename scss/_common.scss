@@ -19,14 +19,17 @@
   /*color*/
   --main-color: #feb81e;
   --sub-color: #002554;
-
+  --vh: 100%;
   --d-gray-color: #666;
   --gray-color: #999;
   /*font*/
   --sub-font: 'subFont';
   --footer-font: 'Noto Sans KR';
 }
-
+html, body {
+  height: 100vh;
+  height: var(--vh);
+}
 body {
   font-size: 1.6rem;
 }
