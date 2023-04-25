@@ -19,9 +19,7 @@
   /*color*/
   --main-color: #feb81e;
   --sub-color: #002554;
-  // --doc-height: 100%;
-  --vh: 100%;
-
+  --doc-height: 100%;
   --d-gray-color: #666;
   --gray-color: #999;
   /*font*/
@@ -33,7 +31,7 @@ html, body {
   padding: 0;
   margin: 0;
   height: 100vh; /* fallback for Js load */
-  height: var(--vh);
+  height: var(--doc-height);
 }
 
 body {
@@ -196,11 +194,11 @@ button {
 
 .border_box {
   position: relative;
-  top: 'auto';
+  top: auto;
   padding-top: 4rem;
   background-color: #fff;
   &.vheight {
-    top: calc(var(--vh, 1vh) * 100);  
+    top: var(--doc-height);  
   }
 }
 
