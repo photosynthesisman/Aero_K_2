@@ -1,0 +1,273 @@
+.location_box {
+  .btn_replace {
+    order: 2;
+  }
+  .location:first-child {
+    order: 1;
+    &.orderTo {
+      order: 3;
+    }
+  }
+  .location:last-child {
+    order: 3;
+    &.orderTo {
+      order: 1;
+    }    
+  }  
+}
+.txt_wrap {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  .h4_tit {
+    margin-top: .4rem;  }
+  .recommend {                    
+    padding: .9rem 3rem .6rem 1.2rem;
+    color: #fff;  
+    font-size: 2.2rem;
+    font-weight: 700;   
+    background: var(--sub-color) url(../images/icon_off3x.png) calc(100% - 1.2rem) center /1.2rem .6rem no-repeat;        
+    box-sizing: border-box;  
+    border-radius: .8rem;    
+  }
+}
+.main-swiper {  
+  width: 60rem;      
+  margin-left: 2.4rem;      
+  .swiper-wrapper {
+    width: 50%;        
+    .swiper-slide {           
+      position: relative;        
+      width: auto;      
+      padding-right: 1.2rem;
+      flex-shrink: 0;      
+      a {
+        width: 100%;
+        height: 100%;
+        img {                   
+          width: auto;
+          height: 39.1rem;
+          object-fit: contain;
+          vertical-align: bottom;
+        }    
+      }   
+    }
+    .txt_wrap {
+      position: absolute;
+      display: block;
+      top: 8.15rem;
+      left: 3rem;
+      color: #fff;
+      font-weight: 700;
+      .txt {       
+        font-size: 1.4rem;
+        line-height: 1;
+        opacity: .8;
+      }
+      p {
+        margin-top: 1.5rem;
+        font-size: 2.4rem;        
+        line-height: 3rem;
+      }
+    }
+  }
+  .swiper-pagination {
+    position: relative;
+    bottom: auto;
+    margin-top: 2.1rem;
+    text-align: left;
+    font-family: var(--sub-font);
+    color: #aaaaaa;
+    .swiper-pagination-current {     
+      margin-right: .6rem;
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 4.8rem;
+      color: #222222;
+    }
+    .swiper-pagination-total {          
+      margin-left: .6rem;
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 2.4rem;
+    }
+  }
+}
+.pass_banner {
+  position: relative;
+  width: 100%;
+  height: 16rem;
+  margin: 6rem 0;
+  background: url(../images/banner3x.png) center / 100% no-repeat;
+  a {
+    width: 100%;
+    height: 100%;
+  .txt_wrap{
+    position: absolute;
+    flex-direction: column;
+    align-items:baseline;
+    top: 50%;
+    left: 2.4rem;
+    transform: translateY(-50%);
+    .jeju_pass {
+      width: 6.8rem;
+      height: 1.2rem;
+      margin-bottom: 1.6rem;
+      background: url(../images/jejupass3x.png) center / 100%  no-repeat;
+    }
+    p {
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 2.6rem;
+      color: #fff;
+    }        
+  }
+}
+}
+.tab_panel {
+  display: none;
+  margin-bottom: 6rem;  
+  &.active {
+    display: block;
+  }
+  .swiper-slide{
+    width: 25.1rem !important;          
+    a{           
+      position: relative; 
+      display: block;    
+      width:100%;
+      height: 100%;
+      .card_txt {
+        position: absolute;
+        z-index: 1;
+        bottom: 2.6rem; //여기 수정
+        left: 2.6rem;   
+        color: #fff;
+        font-weight: 700;
+        .classify{
+          display:inline-block;                              
+          height: 2.4rem;
+          margin-bottom: .8rem;
+          padding: .2rem .8rem .2rem .8rem;
+          font-size: 1.2rem;
+          line-height: 2.4rem;
+          background: rgba($color: #ffffff, $alpha: .3);
+          border-radius: .6rem;
+          text-align: center;
+          box-sizing: border-box;
+        }
+        .product_name{
+          margin-bottom: 1.2rem;
+          font-size: 2.6rem;
+          line-height: 3.3rem;
+        }
+        .product_cost{
+          strong {
+            margin-right: .2rem;
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 2.88rem;
+          }
+          font-size: 2rem;
+          font-weight: 500;
+          line-height: 2.4rem;
+        }
+      }
+      .card_image {
+        position: relative;         
+        height: 28rem;
+        border-radius: 1.6rem; 
+        overflow: hidden;
+        img {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(calc(-50% + 1.1rem));
+          width: 100%;          
+          height: 100%;
+          object-fit: contain;
+        }  
+        // @at-root #activity, #hotel {
+        @at-root .tab_panel .swiper-slide.activity a , .tab_panel .swiper-slide.hotel a  {
+          .card_image img {
+            object-fit: cover;
+            top: 0;
+            transform: none;
+          }
+        }
+        &::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: var(--gray-color);
+          opacity: .4;
+        }  
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%); 
+          opacity: .5;
+        }
+      }       
+    }
+  } 
+}
+
+.visual_typo {
+  animation: wheel 4s infinite;  
+  animation-timing-function: cubic-bezier(1, 1, 1, 1);
+  @keyframes wheel {
+    0%{
+      transform: rotate(0);
+    }     
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+}
+.tape {
+  position: relative;  
+  &:after {
+    content: '';  
+    position: absolute;
+    left: -1000rem;
+    right: -1000rem;
+    top: 0;    
+    bottom: 0;        
+    @at-root .-yellow:after {
+      background: url(../images/pattern1_3x.png) 0 center / 22.5rem auto repeat-x;
+      animation: bg-move2 4s linear infinite;
+    }
+    @at-root .-navy:after {
+      background: url(../images/pattern2_3x.png) 0 center / 17.2rem auto repeat-x;
+      animation: bg-move 4s linear infinite;
+    }
+  }
+  span {
+    display: none;
+  }
+  .text {
+    display: none !important;
+  } 
+  @keyframes bg-move2 {
+    0%{
+      left: -22.5rem;
+    }        
+    100%{
+      left: 0;
+    }
+  }
+  @keyframes bg-move {
+    0%{
+      left: 0;
+    }        
+    100%{
+      left: -17.2rem;
+    }
+  }
+}
