@@ -633,22 +633,22 @@
         });
       }
       function scrollFixMain() {
-        // if(wih < 720){
-        //   $(window).scroll(function () {
-        //     const $scroll = $(this).scrollTop();
-        //     const $vdHeight = $('.main_visual_box').height();
-        //     if ($scroll > 0) {
-        //       $('.main_visual_box').addClass('s_fixed');
-        //       $('.border_box').addClass('s_vheight');
-        //     } else {
-        //       $('.main_visual_box').removeClass('s_fixed');
-        //     }
-        //     if ($scroll > $vdHeight) {
-        //       $('.main_visual_box').removeClass('s_fixed');
-        //       $('.border_box').removeClass('s_vheight');
-        //     }
-        //   })
-        // }else{
+        if(wih < 720){
+          $(window).scroll(function () {
+            const $scroll = $(this).scrollTop();
+            const $vdHeight = $('.main_visual_box').height();
+            if ($scroll > 0) {
+              $('.main_visual_box').addClass('fixed');
+              $('.border_box').addClass('s_vheight');
+            } else {
+              $('.main_visual_box').removeClass('fixed');
+            }
+            if ($scroll > $vdHeight) {
+              $('.main_visual_box').removeClass('fixed');
+              $('.border_box').removeClass('s_vheight');
+            }
+          })
+        }else{
           $(window).scroll(function () {
             const $scroll = $(this).scrollTop();
             const $vdHeight = $('.main_visual_box').height();
@@ -664,7 +664,7 @@
             }
           });
         }       
-      // }
+      }
       bottomMenu();
       headerFix();
       accordianCard();
