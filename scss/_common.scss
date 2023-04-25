@@ -192,20 +192,6 @@ button {
   box-sizing: border-box;
 }
 
-.border_box {
-  position: relative;
-  top: auto;
-  padding-top: 4rem;
-  background-color: #fff;
-  &.vheight {
-    top: 100vh;
-    top: calc(var(--vh, 1vh) * 100);
-    @supports (-webkit-touch-callout: none) { 
-      height: -webkit-fill-available;
-    }
-  }
-}
-
 .btn_area {
   margin-top: 1.2rem;
   padding: 0 2.4rem;
