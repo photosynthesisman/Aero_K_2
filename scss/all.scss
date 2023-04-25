@@ -53,15 +53,15 @@
     overflow-y:visible;
     .video_box {
       height: 100%;
-      // video {
-      //   height: 100%;
-      // }
-      @media screen and (min-width: 1570px) {
-        video {
-          width: 100%;
-          object-fit: cover;
-        }
+      video {        
+        min-height: 72rem;
       }
+      // @media screen and (min-width: 1570px) {
+      //   video {
+      //     width: 100%;
+      //     object-fit: cover;
+      //   }
+      // }
     }
     .visual_typo {
       position: absolute;
