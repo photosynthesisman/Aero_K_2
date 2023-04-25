@@ -48,9 +48,14 @@
 .contents_box {
   .main_visual_box {
     position: relative;
+    z-index: 0;
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    &.fixed {
+      position: fixed;
+      z-index: -1;
+    }
     .video_box {
       height: 100%;
       video {

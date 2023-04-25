@@ -187,8 +187,12 @@ button {
 
 .border_box {
   position: relative;
+  top: 'auto';
   padding-top: 4rem;
   background-color: #fff;
+  &.vheight {
+    top: 100vh;
+  }
 }
 
 .btn_area {
