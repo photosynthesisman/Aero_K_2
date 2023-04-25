@@ -53,9 +53,9 @@
     overflow: hidden;
     .video_box {
       height: 100%;
-      video {
-        height: 100%;
-      }
+      // video {
+      //   height: 100%;
+      // }
       @media screen and (min-width: 1570px) {
         video {
           width: 100%;
