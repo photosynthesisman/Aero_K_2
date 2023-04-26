@@ -27,12 +27,12 @@
   --footer-font: 'Noto Sans KR';
 }
 //2023-04-25
-// html, body {
-//   padding: 0;
-//   margin: 0;
-//   height: 100vh; /* fallback for Js load */
-//   height: calc(var(--vh, 1vh) * 100);
-// }
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100vh; /* fallback for Js load */
+  height: calc(var(--vh, 1vh) * 100);
+}
 
 body {
   font-size: 1.6rem;

@@ -52,7 +52,7 @@
   background-color: #fff;
   &.vheight {
     top: 100vh;
-    // top: calc(var(--vh, 1vh) * 100);
+    top: calc(var(--vh, 1vh) * 100);
   }
   &.s_vheight {    
     top: 72rem;
@@ -60,12 +60,49 @@
 }
 .contents_box {
   .main_visual_box {
+    @media screen and (max-width: 450px) {
+      .df_box {
+        h2 {
+          font-size: 2rem;
+          .h2_img {
+            background-size: 70%;
+          }
+        }
+      }
+      .sch_box {
+        padding: 1.8rem !important;
+        .date_picker,
+        .head_count {
+          margin-top: 2rem !important;
+        }
+        .location_box {
+          justify-content: space-between;
+          gap: 2rem !important;
+        }
+        .tit {
+          font-size: 1.2rem !important;
+        }
+        input,
+        select {
+          font-size: 1.5rem !important;
+        }
+        .day {
+          width: 2.4rem !important;
+        }
+        .date {
+          width: 7.9rem !important;
+        }
+        .btn_sch {
+          margin: 2rem auto 0 !important;
+        }
+      }
+    }
     position: relative;
     z-index: 0;
     width: 100%;
     height: 100vh;
-    overflow:hidden;
-    // min-height: calc(var(--vh, 1vh) * 100);  
+    overflow:visible;
+    min-height: calc(var(--vh, 1vh) * 100);  
     &.fixed {
       position: fixed;
       z-index: -1;  
