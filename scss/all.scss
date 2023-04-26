@@ -45,19 +45,6 @@
 }
 
 /******contents*******/
-.border_box {
-  position: relative;
-  top: auto;
-  padding-top: 4rem;
-  background-color: #fff;
-  &.vheight {
-    top: 100vh;
-    top: calc(var(--vh, 1vh) * 100);
-  }
-  &.s_vheight {    
-    top: 72rem;
-  }
-}
 .contents_box {
   .main_visual_box {
     @media screen and (max-width: 450px) {
@@ -70,7 +57,7 @@
         }
       }
       .sch_box {
-        padding: 1.8rem !important;
+        padding: 1.9rem !important;
         .date_picker,
         .head_count {
           margin-top: 2rem !important;
@@ -80,17 +67,19 @@
           gap: 2rem !important;
         }
         .tit {
-          font-size: 1.2rem !important;
+          font-size: 1.3rem !important;
         }
         input,
         select {
-          font-size: 1.5rem !important;
+          font-size: 1.6rem !important;
         }
         .day {
-          width: 2.4rem !important;
+          font-size: 1.5rem !important;
+          width: 2.5rem !important;
         }
         .date {
-          width: 7.9rem !important;
+          font-size: 1.5rem !important;
+          width: 8rem !important;
         }
         .btn_sch {
           margin: 2rem auto 0 !important;
@@ -98,18 +87,9 @@
       }
     }
     position: relative;
-    z-index: 0;
     width: 100%;
     height: 100vh;
-    overflow:visible;
-    min-height: calc(var(--vh, 1vh) * 100);  
-    &.fixed {
-      position: fixed;
-      z-index: -1;  
-    }
-    &.s_fixed {     
-      min-height: 72rem;  
-    }
+    overflow: hidden;
     .video_box {
       height: 100%;
       video {
@@ -150,8 +130,8 @@
         text-indent: -9999rem;
       }
       .sch_box {
-        margin: 0 auto;
         padding: 3rem;
+        margin: 0 auto;
         border-radius: 1.6rem;
         background: rgba(255, 255, 255, 0.6);
         backdrop-filter: blur(10px);
