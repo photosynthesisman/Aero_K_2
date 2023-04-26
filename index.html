@@ -529,7 +529,8 @@
                     <p>에어로케이는 국내 지방 공항 취항사 최초로 <b>도어 투 도어 캐리어 배달 서비스</b>를 제공합니다. 트립이지와의 제휴 서비스를 통해 집에서 도착지의 숙소까지 무거운 짐은 먼저 보내고, 오직 여정에만 집중하세요</p>
                     <a href="#none" class="btn_read" role="button">자세히보기</a>
                   </div>
-                  <div class="img_box"></div>
+                  <div class="img_box"></div>'lang
+                  l'
                 </div>
               </div>
               <div class="btn_area">
@@ -597,16 +598,16 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
     <script>
-      let wih = window.innerHeight;
-      $(document).ready(function () {
-      //최재석
-        let vh = wih * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);        
+      // let wih = window.innerHeight;
+      // $(document).ready(function () {
+      // //최재석
+      //   let vh = wih * 0.01;
+      //   document.documentElement.style.setProperty('--vh', `${vh}px`);        
   
-        if(wih < 720){                   
-          $('.main_visual_box').addClass('s_fixed')
-        }
-      })
+      //   if(wih < 720){                   
+      //     $('.main_visual_box').addClass('s_fixed')
+      //   }
+      // })
 
       function bottomMenu() {
         $(window).scroll(function () {
@@ -643,23 +644,23 @@
         });
       }
       function scrollFixMain() {
-        if(wih < 720){
-          $(window).scroll(function () {
-            const $scroll = $(this).scrollTop();
-            const $vdHeight = $('.main_visual_box').height();
-            console.log($vdHeight)
-            if ($scroll > 0) {
-              $('.main_visual_box').addClass('fixed');
-              $('.border_box').addClass('s_vheight');
-            } else {
-              $('.main_visual_box').removeClass('fixed');
-            }
-            if ($scroll > $vdHeight) {
-              $('.main_visual_box').removeClass('fixed');
-              $('.border_box').removeClass('s_vheight');
-            }
-          })
-        }else{
+        // if(wih < 720){
+        //   $(window).scroll(function () {
+        //     const $scroll = $(this).scrollTop();
+        //     const $vdHeight = $('.main_visual_box').height();
+        //     console.log($vdHeight)
+        //     if ($scroll > 0) {
+        //       $('.main_visual_box').addClass('fixed');
+        //       $('.border_box').addClass('s_vheight');
+        //     } else {
+        //       $('.main_visual_box').removeClass('fixed');
+        //     }
+        //     if ($scroll > $vdHeight) {
+        //       $('.main_visual_box').removeClass('fixed');
+        //       $('.border_box').removeClass('s_vheight');
+        //     }
+        //   })
+        // }else{
           $(window).scroll(function () {
             const $scroll = $(this).scrollTop();
             const $vdHeight = $('.main_visual_box').height();
@@ -675,7 +676,7 @@
             }
           });
         }       
-      }
+      // }
       bottomMenu();
       headerFix();
       accordianCard();
