@@ -1,6 +1,6 @@
 $(document).ready(function () {
   //최재석
-
+  mainSwipe(); 
   function scrollActionBanner() {
     $(window).on('scroll', function () {
       const boxOffset = $('.letter_box').offset().top;
@@ -111,9 +111,8 @@ $(document).ready(function () {
     selection.toggleClass('orderTo')    
   });
  
-  mainSwipe();
-  subSwipe();
-  // selectBox();  
+  
+  subSwipe();  
   scrollActionBanner();  
 
   // 박은교
