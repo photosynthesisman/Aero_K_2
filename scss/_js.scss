@@ -279,11 +279,19 @@
   left: 5rem;
   z-index: 1000;
   background: rgba(22, 22, 22, 0.4);      
+  @media screen and (max-width: 450px){  
+    width: 34rem; 
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .pop_wrap {  
     padding: 3rem;    
     .rule {
       line-height: 2.4rem;
       letter-spacing: -0.5px;
+      @media screen and (max-width: 450px){  
+        font-size: 1.4rem;
+      }
     } 
   }
   .index {
