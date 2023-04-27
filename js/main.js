@@ -1,4 +1,51 @@
 $(document).ready(function () {
+  let myPopup = document.querySelector('.popup'),
+    closeBtn = myPopup.querySelector('button'),
+    oneDayCheck = document.querySelector('#nomore');
+
+    function checkcookie(name){
+        var cookies = document.cookie.split(';');
+        var visited = false;
+
+        for(ck of cookies){
+            if(ck.indexOf(name) > -1){
+                visited = true;
+            }                
+        }
+        if(visited == true){
+            myPopup.style.display = 'none';            
+        }else{
+            myPopup.style.display = 'block';        
+        }
+    }
+    checkcookie('aeroK2');
+
+    function setCookie(name,value,day){           
+        var date = new Date();
+        date.setDate(date.getDate()+day);
+
+        var myCookie = '';
+        myCookie = `${name}=${value};Expires=${date.toUTCString()}`;            
+        document.cookie = myCookie;
+    }//setcookie
+
+    function deleteCookie(name,value){                
+        var date = new Date();            
+        date.setDate(date.getDate()-1);
+
+        var myCookie = '';
+        myCookie = `${name}=${value};Expires=${date.toUTCString()}`;   
+        document.cookie = myCookie;
+    }
+
+    closeBtn.addEventListener('click',()=>{
+        if(!oneDayCheck.checked){ 
+            deleteCookie('aeroK2','home');
+        }else{
+            setCookie('aeroK2','home',1);
+        }
+    myPopup.style.display = 'none';
+    });
   //최재석
   mainSwipe(); 
   function scrollActionBanner() {
