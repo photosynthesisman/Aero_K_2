@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function () {  
   let myPopup = document.querySelector('.popup'),
     closeBtn = myPopup.querySelector('button'),
     oneDayCheck = document.querySelector('#nomore');
@@ -88,10 +88,10 @@ $(document).ready(function () {
         }
       },
       on: {
-        init: function () {
-          $('.swiper-pagination-current').text('01');
-          $('.swiper-pagination-total').text('04');
-        },
+        // init: function () {
+        //   $('.swiper-pagination-current').text('01');
+        //   $('.swiper-pagination-total').text('04');
+        // },
         slideChange: function () {
           let currentNum = $('.swiper-pagination-current').text();
           let totalNum = $('.swiper-pagination-total').text();
@@ -164,3 +164,7 @@ $(document).ready(function () {
 
   // 박은교
 }); //document.ready
+window.onload = function() {
+  $('.swiper-pagination-current').text('01');
+  $('.swiper-pagination-total').text('04');
+}
